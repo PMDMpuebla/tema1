@@ -1,0 +1,10 @@
+site_name: Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1
+site_description: Introducción a Android - Tema 1 del módulo PMDM
+theme:
+  name: material
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: Roboto
+    code: Roboto Mono
