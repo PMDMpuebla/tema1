@@ -1,17 +1,20 @@
-# Welcome to MkDocs
+# Programación Multimedia y Dispositivos Móviles - Tema 1
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Introducción a Android y su ecosistema
 
-## Commands
+En este tema se abordarán los conceptos fundamentales de la programación para Android, incluyendo la configuración del entorno de desarrollo, la estructura de un proyecto Android y los componentes básicos de una aplicación.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Contenido
 
-## Project layout
+El contenido de este tema se divide en las siguientes secciones:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* Introducción a Android y su ecosistema.
+* Configuración del entorno de desarrollo (Android Studio, SDK, emuladores).
+* Creación de una aplicación básica.
+* Estructura de un proyecto Android.
+* Ejecución y depuración de la aplicación en un emulador o dispositivo físico.
+* Otras consideraciones importantes para el desarrollo de aplicaciones Android.
+
+## Versiones
+
+* Septiembre 2026 - Versión 1.0 -  Versión inicial del tema. Curso 2026-27.

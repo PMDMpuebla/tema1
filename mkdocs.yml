@@ -1,10 +1,31 @@
 site_name: Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1
 site_description: Introducción a Android - Tema 1 del módulo PMDM
+site_url: https://pmdmpuebla.github.io/tema1/
 theme:
   name: material
   palette:
-    primary: 'indigo'
+    primary: 'purple'
     accent: 'indigo'
   font:
     text: Roboto
     code: Roboto Mono
+  logo: img/android-logo.svg
+  features:
+    - navigation.footer
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+extra:
+  generator: false
+nav:
+  - Home: index.md
+  - Introducción: introduccion.md
+  - Instalación: instalacion.md
+  - Primera aplicación: primera_aplicacion.md
+  - Estructura de un proyecto Android: estructura_proyecto.md
+  - Ejecución y depuración: ejecucion_depuracion.md
+  - Otras consideraciones: otras_consideraciones.md
+  - Recursos: recursos.md
+copyright: Copyright &copy; 2026 Víctor Suárez. IES Puebla de Vicar.
+
