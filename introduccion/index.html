@@ -1,0 +1,835 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introducción a Android - Tema 1 del módulo PMDM">
+      
+      
+      
+        <link rel="canonical" href="https://pmdmpuebla.github.io/tema1/introduccion/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Introducción - Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion-a-android-y-su-ecosistema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" class="md-header__button md-logo" aria-label="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" data-md-component="logo">
+      
+  <img src="../img/android-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" class="md-nav__button md-logo" aria-label="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" data-md-component="logo">
+      
+  <img src="../img/android-logo.svg" alt="logo">
+
+    </a>
+    Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dispositivos-moviles-y-sistemas-operativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dispositivos móviles y sistemas operativos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-y-sistemas-operativos-moviles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software y sistemas operativos móviles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-operativo-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema operativo Android
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema operativo Android">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historia-de-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecosistema-de-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ecosistema de Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollo-para-dispositivos-moviles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desarrollo para dispositivos móviles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollo-de-aplicaciones-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desarrollo de aplicaciones Android
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primera_aplicacion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primera aplicación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructura_proyecto.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura de un proyecto Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejecucion_depuracion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejecución y depuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../otras_consideraciones.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Otras consideraciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dispositivos-moviles-y-sistemas-operativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dispositivos móviles y sistemas operativos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-y-sistemas-operativos-moviles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software y sistemas operativos móviles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-operativo-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema operativo Android
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema operativo Android">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historia-de-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecosistema-de-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ecosistema de Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollo-para-dispositivos-moviles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desarrollo para dispositivos móviles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollo-de-aplicaciones-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desarrollo de aplicaciones Android
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccion-a-android-y-su-ecosistema">Introducción a Android y su ecosistema</h1>
+<p>En este apartado se presentará una visión general de Android, su sistema operativo y su ecosistema. Hoy en día, los dispositivos móviles son una parte integral de nuestra vida cotidiana, y Android es uno de los sistemas operativos más populares en el mundo. Comprender su funcionamiento y su ecosistema es esencial para cualquier desarrollador que desee crear aplicaciones móviles.</p>
+<p>Conocer estos dispositivos, nos ayudará a entender mejor cómo interactúan con el sistema operativo y cómo podemos aprovechar sus características para desarrollar aplicaciones más eficientes y atractivas. Es importante mencionar que estos dispositivos a diferencia de los ordenadores personales, tienen limitaciones de recursos, como memoria y capacidad de procesamiento, lo que hace que la optimización del rendimiento sea un aspecto crucial en el desarrollo de aplicaciones móviles.</p>
+<p>Cuando se habla de dispositivos móviles, nos referimos a aquellos que son portátiles y que permiten la comunicación y el acceso a información en cualquier lugar. Estos dispositivos incluyen teléfonos inteligentes, tabletas, relojes inteligentes y otros dispositivos portátiles. La popularidad de estos dispositivos ha llevado a un aumento significativo en la demanda de aplicaciones móviles, lo que hace que el desarrollo para Android sea una habilidad valiosa en el mercado laboral actual.</p>
+<p>En muchas ocasiones, se hace referencia a los dispositivos móviles como "smartphones" o "teléfonos inteligentes", que son aquellos que combinan las funciones de un teléfono tradicional con capacidades avanzadas de computación y conectividad a Internet. Estos dispositivos permiten a los usuarios realizar una amplia variedad de tareas, desde la comunicación hasta el entretenimiento y la productividad. Hoy en día no solo se aplica a los teléfonos, sino que también se extiende a otros dispositivos portátiles como tabletas, relojes inteligentes y dispositivos de realidad aumentada.</p>
+<p>En este contexto, Android se ha convertido en el sistema operativo más utilizado en dispositivos móviles, ofreciendo una plataforma flexible y personalizable para desarrolladores y fabricantes de dispositivos. Su ecosistema incluye una amplia gama de aplicaciones, servicios y herramientas que permiten a los desarrolladores crear experiencias únicas para los usuarios.</p>
+<h3 id="dispositivos-moviles-y-sistemas-operativos">Dispositivos móviles y sistemas operativos</h3>
+<p>Comenzaremos por definir qué es un dispositivo móvil y cómo se diferencia de otros tipos de dispositivos electrónicos. Un dispositivo móvil es un aparato electrónico portátil que permite la comunicación y el acceso a información en cualquier lugar. Estos dispositivos suelen ser compactos, ligeros y fáciles de transportar, lo que los hace ideales para su uso en movimiento.</p>
+<p>Algunas de las características clave de los dispositivos móviles incluyen:</p>
+<ul>
+<li><em>Portabilidad</em>: Los dispositivos móviles son pequeños y ligeros, lo que permite a los usuarios llevarlos consigo a todas partes.</li>
+<li><em>Conectividad</em>: La mayoría de los dispositivos móviles cuentan con capacidades de conectividad, como Wi-Fi, Bluetooth y redes móviles, lo que permite a los usuarios acceder a Internet y comunicarse con otros dispositivos.</li>
+<li><em>Interfaz táctil</em>: Muchos dispositivos móviles cuentan con pantallas táctiles que permiten a los usuarios interactuar con el dispositivo mediante gestos y toques, lo que facilita la navegación y el uso de aplicaciones.</li>
+<li><em>Sensores</em>: Los dispositivos móviles suelen incluir una variedad de sensores, como acelerómetros, giroscopios y sensores de proximidad, que permiten a las aplicaciones aprovechar estas capacidades para ofrecer experiencias más interactivas y personalizadas.</li>
+</ul>
+<p>Podemos identificar varios tipos de dispositivos móviles, entre los que se incluyen:</p>
+<ul>
+<li><em>Teléfonos inteligentes (smartphones)</em>: Dispositivos que combinan las funciones de un teléfono tradicional con capacidades avanzadas de computación y conectividad a Internet.</li>
+<li><em>Tabletas</em>: Dispositivos con pantallas más grandes que los teléfonos inteligentes, diseñados para ofrecer una experiencia de usuario más inmersiva y versátil, ideales para la navegación web, la lectura de libros electrónicos y el consumo de contenido multimedia.</li>
+<li><em>Relojes inteligentes (smartwatches)</em>: Dispositivos portátiles que se llevan en la muñeca y ofrecen funciones de seguimiento de actividad física, notificaciones y otras aplicaciones, permitiendo a los usuarios mantenerse conectados sin necesidad de sacar su teléfono del bolsillo.</li>
+<li><em>Dispositivos de realidad aumentada (AR)</em>: Dispositivos que combinan el mundo real con elementos virtuales, ofreciendo experiencias interactivas y enriquecidas para los usuarios, como juegos, aplicaciones educativas y herramientas de productividad.</li>
+<li><em>Otros dispositivos portátiles</em>: Existen otros tipos de dispositivos móviles, como auriculares inteligentes, gafas inteligentes y dispositivos de seguimiento de salud, que ofrecen funcionalidades específicas y se integran con el ecosistema de Android.</li>
+<li><em>Dispositivos de Juegos portátiles</em>: Consolas de videojuegos portátiles que permiten a los usuarios jugar en cualquier lugar, ofreciendo una experiencia de juego inmersiva y accesible.</li>
+</ul>
+<figure>
+  <img src="/tema1/img/smartdevices.png" alt="Dispositivos inteligentes" width="600">
+  <figcaption>Dispositivos Inteligentes</figcaption>
+</figure>
+
+<p>A la hora de trabajar con estos dispositivos, es importante tener en cuenta las limitaciones de recursos que presentan, algunos de ellos son:</p>
+<ul>
+<li><em>Memoria</em>: Los dispositivos móviles suelen tener una cantidad limitada de memoria RAM y almacenamiento interno, lo que puede afectar el rendimiento de las aplicaciones si no se gestionan adecuadamente los recursos.</li>
+<li><em>Capacidad de procesamiento</em>: Los procesadores de los dispositivos móviles suelen ser menos potentes que los de los ordenadores personales, lo que puede limitar la capacidad de ejecución de aplicaciones complejas y exigir una optimización del rendimiento.</li>
+<li><em>Duración de la batería</em>: La duración de la batería es un factor crítico en los dispositivos móviles, ya que los usuarios esperan que sus dispositivos funcionen durante todo el día sin necesidad de recargarlos. Los desarrolladores deben tener en cuenta el consumo de energía de sus aplicaciones para garantizar una experiencia de usuario satisfactoria.</li>
+<li><em>Conectividad</em>: La calidad y disponibilidad de la conectividad a Internet puede variar según la ubicación y el tipo de red, lo que puede afectar la experiencia del usuario al utilizar aplicaciones que dependen de la conexión a Internet.</li>
+<li><em>Compatibilidad de hardware</em>: Los dispositivos móviles pueden variar en términos de hardware, como tamaño de pantalla, resolución, capacidades de cámara y sensores, lo que puede requerir que los desarrolladores adapten sus aplicaciones para garantizar una experiencia de usuario consistente en diferentes dispositivos.</li>
+<li><em>Refrigación y temperatura</em>: Los dispositivos móviles pueden calentarse durante el uso intensivo, lo que puede afectar el rendimiento y la duración de la batería. Los desarrolladores deben tener en cuenta estos factores al diseñar aplicaciones que requieran un uso intensivo de recursos.</li>
+</ul>
+<h3 id="software-y-sistemas-operativos-moviles">Software y sistemas operativos móviles</h3>
+<p>Cuando hablamos de software y sistemas operativos móviles, nos referimos a los programas y plataformas que permiten a los dispositivos móviles funcionar y ejecutar aplicaciones. Un sistema operativo móvil es el software principal que gestiona los recursos del dispositivo, proporciona una interfaz de usuario y permite la ejecución de aplicaciones.</p>
+<p>En la actualidad, existen varios sistemas operativos móviles en el mercado, siendo los más populares Android e iOS. Cada uno de estos sistemas operativos tiene sus propias características, ventajas y desventajas, lo que influye en la experiencia del usuario y en el desarrollo de aplicaciones.</p>
+<ul>
+<li><em>Android</em>: Desarrollado por Google, Android es un sistema operativo de código abierto basado en el núcleo de Linux. Es el sistema operativo más utilizado en dispositivos móviles a nivel mundial y ofrece una amplia gama de características y funcionalidades para desarrolladores y usuarios. Android permite la personalización del sistema operativo y la creación de aplicaciones mediante el uso de herramientas y lenguajes de programación como Java y Kotlin.</li>
+<li><em>iOS</em>: Desarrollado por Apple, iOS es un sistema operativo propietario utilizado exclusivamente en dispositivos de la marca Apple, como iPhone, iPad y iPod Touch. iOS se caracteriza por su diseño intuitivo, su seguridad y su ecosistema cerrado, lo que significa que las aplicaciones deben pasar por un proceso de revisión antes de ser publicadas en la App Store. El desarrollo de aplicaciones para iOS se realiza principalmente utilizando el lenguaje de programación Swift y el entorno de desarrollo Xcode.</li>
+<li><em>Otros sistemas operativos</em>: Además de Android e iOS, existen otros sistemas operativos móviles menos populares, como Windows Phone, BlackBerry OS y Tizen. Estos sistemas operativos tienen una cuota de mercado más pequeña y ofrecen características y funcionalidades específicas para ciertos dispositivos y usuarios. Algunos ya estan descontinuados, como Windows Phone y BlackBerry OS, mientras que otros, como Tizen, se utilizan en dispositivos específicos como televisores inteligentes y relojes inteligentes.</li>
+</ul>
+<h3 id="sistema-operativo-android">Sistema operativo Android</h3>
+<p>Vamos a centrarnos en Android, el sistema operativo más utilizado en dispositivos móviles. Android es un sistema operativo basado en Linux que ha sido desarrollado por Google y es de código abierto, lo que significa que los desarrolladores pueden acceder al código fuente y modificarlo según sus necesidades.</p>
+<p>Android en la actualidad es un sistema operativo muy versátil y flexible, que permite a los fabricantes de dispositivos personalizarlo y adaptarlo a sus necesidades. Esto ha llevado a una gran diversidad de dispositivos Android en el mercado, desde teléfonos inteligentes y tabletas hasta televisores inteligentes y dispositivos portátiles.</p>
+<p>Algunas de sus características clave incluyen:</p>
+<ul>
+<li>
+<p>Gestión dinámica de memoria y procesos: El sistema operativo destruye procesos en segundo plano si necesita liberar memoria para la app activa.</p>
+</li>
+<li>
+<p>Sistema de permisos en tiempo de ejecución (Runtime Permissions): Protege la privacidad del usuario solicitando acceso a la cámara, ubicación o contactos solo cuando la función lo requiere.</p>
+</li>
+<li>
+<p>Almacenamiento estructurado: Uso de bases de datos relacionales locales (Room/SQLite), DataStore / SharedPreferences para preferencias de usuario y almacenamiento de archivos privados/públicos.</p>
+</li>
+<li>
+<p>Conectividad y trabajo en segundo plano: WorkManager para tareas diferibles y garantizadas, servicios en primer plano (Foreground Services) para tareas continuas.</p>
+</li>
+</ul>
+<p>Otro de los aspectos importantes de Android es su ecosistema, que incluye una amplia gama de aplicaciones, servicios y herramientas que permiten a los desarrolladores crear experiencias únicas para los usuarios. El ecosistema de Android se basa en la colaboración entre Google, los fabricantes de dispositivos y los desarrolladores de aplicaciones, lo que ha llevado a un crecimiento significativo en la cantidad y calidad de las aplicaciones disponibles en la plataforma.</p>
+<figure>
+  <img src="/tema1/img/androidlogo.png" alt="Logo de Android" width="200">
+  <figcaption>Logo de Android</figcaption>
+</figure>
+
+<h4 id="historia-de-android">Historia de Android</h4>
+<p>Veamos la historia de Android, desde sus inicios hasta la actualidad. Android fue fundado en 2003 por Andy Rubin, Rich Miner, Nick Sears y Chris White. Inicialmente, el objetivo de la empresa era desarrollar un sistema operativo para cámaras digitales, pero pronto se dieron cuenta del potencial del mercado de dispositivos móviles y decidieron cambiar su enfoque hacia los teléfonos inteligentes.</p>
+<p>En 2005, Google adquirió Android Inc. y comenzó a invertir en su desarrollo. En 2008, se lanzó la primera versión de Android, y en 2010, se lanzó Android 2.0, que incluyó características importantes como el soporte para múltiples cuentas y la posibilidad de usar aplicaciones de terceros. Durante los años siguientes, Android continuó evolucionando y mejorando, con nuevas versiones que introdujeron características como la multitarea, la personalización de la interfaz de usuario y el soporte para nuevas tecnologías como NFC y Bluetooth.</p>
+<p>En los últimos años, Android ha seguido creciendo y consolidándose como el sistema operativo móvil más popular del mundo, con una cuota de mercado que supera el 70% a nivel global. Google continúa desarrollando nuevas versiones de Android, cada una con mejoras en rendimiento, seguridad y funcionalidad, lo que garantiza que la plataforma siga siendo relevante y atractiva para los desarrolladores y usuarios por igual.</p>
+<p>Actualmente en la versión 17, Android 17, lanzada en 2026, incluye mejoras significativas en la privacidad del usuario, optimización del rendimiento y nuevas herramientas para desarrolladores. Esta versión también introduce nuevas APIs y funcionalidades que permiten a los desarrolladores crear aplicaciones más innovadoras y atractivas para los usuarios.</p>
+<figure>
+  <img src="/tema1/img/android17.jpeg" alt="Android 17" width="200">
+  <figcaption>Android 17</figcaption>
+</figure>
+
+<h4 id="ecosistema-de-android">Ecosistema de Android</h4>
+<p>Vamos a explorar el ecosistema de Android, que incluye una amplia gama de aplicaciones, servicios y herramientas que permiten a los desarrolladores crear experiencias únicas para los usuarios. El ecosistema de Android se basa en la colaboración entre Google, los fabricantes de dispositivos y los desarrolladores de aplicaciones, lo que ha llevado a un crecimiento significativo en la cantidad y calidad de las aplicaciones disponibles en la plataforma.</p>
+<h3 id="desarrollo-para-dispositivos-moviles">Desarrollo para dispositivos móviles</h3>
+<h3 id="desarrollo-de-aplicaciones-android">Desarrollo de aplicaciones Android</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Víctor Suárez. IES Puebla de Vicar.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
