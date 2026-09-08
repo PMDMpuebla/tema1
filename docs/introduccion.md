@@ -98,6 +98,52 @@ Actualmente en la versión 17, Android 17, lanzada en 2026, incluye mejoras sign
 
 Vamos a explorar el ecosistema de Android, que incluye una amplia gama de aplicaciones, servicios y herramientas que permiten a los desarrolladores crear experiencias únicas para los usuarios. El ecosistema de Android se basa en la colaboración entre Google, los fabricantes de dispositivos y los desarrolladores de aplicaciones, lo que ha llevado a un crecimiento significativo en la cantidad y calidad de las aplicaciones disponibles en la plataforma.
 
+Uno de los aspectos más importantes del ecosistema de Android, es su arquitectura abierta y flexible, que permite a los desarrolladores crear aplicaciones para una amplia variedad de dispositivos y plataformas. Esto ha llevado a un crecimiento significativo en la cantidad y calidad de las aplicaciones disponibles en la plataforma, lo que a su vez ha contribuido al éxito de Android como sistema operativo móvil.
+
+<figure>
+  <img src="/tema1/img/android-stack.png" alt="Ecosistema de Android" width="600">
+  <figcaption>Arquitectura de Android</figcaption>
+</figure>
+
+Como vemos en la figura, el ecosistema de Android se compone de varios elementos clave, que incluyen:
+
+* Linux Kernel: El núcleo del sistema operativo Android, que proporciona la base para la gestión de recursos y la comunicación entre el hardware y el software.
+* Hardware Abstraction Layer (HAL): Una capa de abstracción que permite a los desarrolladores interactuar con el hardware del dispositivo sin necesidad de conocer los detalles específicos del mismo.
+* Android Runtime (ART): El entorno de ejecución de Android, que permite la ejecución de aplicaciones desarrolladas en Java y Kotlin mediante la compilación de código en tiempo de ejecución.
+* Librerías nativas: Un conjunto de bibliotecas y APIs que proporcionan funcionalidades básicas para el desarrollo de aplicaciones, como gráficos, audio, redes y almacenamiento.
+* Framework de aplicaciones: Un conjunto de bibliotecas y APIs que permiten a los desarrolladores crear aplicaciones para Android utilizando lenguajes de programación como Java y Kotlin.
+* Aplicaciones: Las aplicaciones desarrolladas para Android, que pueden ser descargadas e instaladas desde la Google Play Store u otras fuentes, y que ofrecen una amplia variedad de funcionalidades y servicios a los usuarios.
+
+Todo este conjunto de elementos conforma el ecosistema de Android, que permite a los desarrolladores crear aplicaciones innovadoras y atractivas para los usuarios, y a los fabricantes de dispositivos ofrecer experiencias únicas y personalizadas en sus productos.
+
 ### Desarrollo para dispositivos móviles
 
+Veamos ahora, como podemos desarrollar para dispositivos móviles, centrándonos después en el desarrollo de aplicaciones para Android. El desarrollo de aplicaciones móviles implica la creación de software que se ejecuta en dispositivos móviles, como teléfonos inteligentes y tabletas, y que permite a los usuarios realizar una amplia variedad de tareas y actividades.
+
+Para cada dispositivo o sistema operativo móvil, existen diferentes herramientas y lenguajes de programación que los desarrolladores pueden utilizar para crear aplicaciones. En el caso de Android, los desarrolladores pueden utilizar lenguajes como Java y Kotlin, así como otros frameworks y bibliotecas basados en la utilización de otros lengaujes basadps en web, como JavaScript, HTML y CSS, para crear aplicaciones híbridas que se ejecutan en múltiples plataformas.
+
+En resumidas cuentas para desarrollar aplicaciones para dispositivos móviles, los desarrolladores deben tener en cuenta las características y limitaciones de los dispositivos, así como las necesidades y expectativas de los usuarios. Esto implica la creación de interfaces de usuario intuitivas y atractivas, la optimización del rendimiento y la gestión eficiente de los recursos del dispositivo. Veamos estas diferencias:
+
+* Desarrollo Nativo: Implica el uso de lenguajes de programación y herramientas específicas para cada plataforma, como Java y Kotlin para Android, y Swift para iOS. Este enfoque permite aprovechar al máximo las capacidades del dispositivo y ofrecer un rendimiento óptimo, pero requiere conocimientos específicos de cada plataforma y puede resultar en un mayor tiempo de desarrollo.
+* Desarrollo Híbrido: Implica el uso de tecnologías web, como HTML, CSS y JavaScript, para crear aplicaciones que se ejecutan en múltiples plataformas mediante el uso de frameworks como React Native, Flutter o Ionic. Este enfoque permite un desarrollo más rápido y eficiente, pero puede tener limitaciones en cuanto a rendimiento y acceso a las funcionalidades del dispositivo.
+* Motores de Juegos: Implica el uso de motores de juegos como Unity o Unreal Engine para crear aplicaciones y juegos que se ejecutan en múltiples plataformas. Este enfoque permite la creación de experiencias interactivas y atractivas, pero puede requerir conocimientos específicos de desarrollo de juegos y puede tener limitaciones en cuanto a rendimiento y acceso a las funcionalidades del dispositivo.
+
+!!! info
+    Durante este curso, veremos algunas de estas herramientas como el motor de videojuegos Godot, que nos permitirá crear aplicaciones y juegos para dispositivos móviles de manera eficiente y atractiva. Godot es un motor de juegos de código abierto que ofrece una amplia gama de funcionalidades y herramientas para el desarrollo de aplicaciones y juegos, y que permite a los desarrolladores crear experiencias únicas para los usuarios.
+
 ### Desarrollo de aplicaciones Android
+
+Una vez visto como se desarrolla para dispositivos móviles, vamos a centrarnos en el desarrollo de aplicaciones para Android. El desarrollo de aplicaciones Android implica la creación de software que se ejecuta en dispositivos que utilizan el sistema operativo Android, y que permite a los usuarios realizar una amplia variedad de tareas y actividades.
+
+Para comenzar, vamos a ver las herramientas que necesitamos para desarrollar aplicaciones Android, que incluyen:
+
+* JDK (Java Development Kit): Un conjunto de herramientas y bibliotecas necesarias para desarrollar aplicaciones en Java, que es uno de los lenguajes de programación utilizados para crear aplicaciones Android. Se requiere una versión de JDK 17 o superior para desarrollar aplicaciones Android modernas.
+* Android Studio: El entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android, que proporciona herramientas y funcionalidades para crear, depurar y probar aplicaciones.
+* Gradle: Un sistema de automatización de compilación que se utiliza para gestionar las dependencias y construir aplicaciones Android de manera eficiente.
+* Android SDK (Software Development Kit): Un conjunto de herramientas y bibliotecas necesarias para desarrollar aplicaciones Android, que incluye APIs, emuladores y herramientas de depuración.
+* Emuladores: Herramientas que permiten simular dispositivos Android en un ordenador, lo que facilita la prueba y depuración de aplicaciones sin necesidad de utilizar un dispositivo físico.
+
+Durante este curso, aprenderemos a utilizar estas herramientas para crear aplicaciones Android de manera eficiente y atractiva, y a aprovechar al máximo las capacidades del sistema operativo y los dispositivos móviles.
+
+!!! note
+    Es importante mencionar que, aunque el desarrollo de aplicaciones Android se centra en el uso de Java y Kotlin, también existen otras herramientas y lenguajes de programación que permiten crear aplicaciones Android, como C++ y Python. Sin embargo, estos enfoques pueden tener limitaciones en cuanto a rendimiento y acceso a las funcionalidades del dispositivo, por lo que se recomienda utilizar Java o Kotlin para el desarrollo de aplicaciones Android modernas.
