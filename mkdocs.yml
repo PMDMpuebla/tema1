@@ -18,6 +18,8 @@ markdown_extensions:
   - pymdownx.superfences
 extra:
   generator: false
+extra_css:
+  - css/style.css
 nav:
   - Home: index.md
   - Introducción: introduccion.md
