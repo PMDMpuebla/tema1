@@ -1,0 +1,725 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introducción a Android - Tema 1 del módulo PMDM">
+      
+      
+      
+        <link rel="canonical" href="https://pmdmpuebla.github.io/tema1/ejecucion_depuracion/">
+      
+      
+        <link rel="prev" href="../estructura_proyecto/">
+      
+      
+        <link rel="next" href="../otras_consideraciones/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Ejecución y depuración - Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejecucion-y-depuracion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" class="md-header__button md-logo" aria-label="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" data-md-component="logo">
+      
+  <img src="../img/alogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ejecución y depuración
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" class="md-nav__button md-logo" aria-label="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" data-md-component="logo">
+      
+  <img src="../img/alogo.png" alt="logo">
+
+    </a>
+    Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primera_aplicacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primera aplicación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructura_proyecto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura de un proyecto Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejecución y depuración
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejecución y depuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-en-un-emulador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecución en un Emulador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-en-un-dispositivo-fisico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecución en un Dispositivo Físico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depuracion-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depuración de la Aplicación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../otras_consideraciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Otras consideraciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-en-un-emulador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecución en un Emulador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-en-un-dispositivo-fisico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecución en un Dispositivo Físico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depuracion-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depuración de la Aplicación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ejecucion-y-depuracion">Ejecución y Depuración</h1>
+<p>En esta sección, aprenderemos cómo ejecutar y depurar nuestra aplicación Android utilizando Android Studio. La ejecución y depuración son pasos importantes en el desarrollo de aplicaciones, ya que nos permiten probar nuestro código y encontrar errores o problemas en nuestra aplicación.</p>
+<p>Hemos creado nuestra primera aplicación Android, y ahora es el momento de ejecutarla para ver cómo funciona. Para ejecutar nuestra aplicación, podemos utilizar un dispositivo físico o un emulador de Android.</p>
+<p>Podemos optar por ejecutar nuestra aplicación en un dispositivo físico conectado a nuestra computadora mediante un cable USB, o podemos utilizar un emulador de Android que simula un dispositivo en nuestra computadora.</p>
+<p>Vamos a ver los pasos para ejecutar nuestra aplicación en ambos casos.</p>
+<h2 id="ejecucion-en-un-emulador">Ejecución en un Emulador</h2>
+<p>Para ejecutar nuestra aplicación en un emulador de Android, primero debemos asegurarnos de tener un emulador configurado en Android Studio. Si no tenemos un emulador configurado, podemos crear uno siguiendo estos pasos:</p>
+<ol>
+<li>Abrimos Android Studio y vamos al menú "Tools" (Herramientas).</li>
+<li>Seleccionamos "AVD Manager" (Administrador de Dispositivos Virtuales Android).</li>
+<li>Hacemos click en el icono de play para arrancar un emulador existente o en el icono de "Create Virtual Device" (Crear Dispositivo Virtual) para crear uno nuevo.</li>
+<li>Una vez arrancado, podemos ejecutar nuestra aplicación haciendo click en el botón de "Run" (Ejecutar) en la barra de herramientas de Android Studio, o utilizando el atajo de teclado <code>Shift + F10</code>.</li>
+<li>Seleccionamos el emulador en el que queremos ejecutar nuestra aplicación y hacemos click en "OK".</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si no tienes creado un emulador, puedes seguir los pasos mencionados anteriormente para crear uno. Asegúrate de seleccionar un dispositivo y una versión de Android que sean compatibles con tu aplicación.</p>
+</div>
+<figure>
+  <img src="../img/app1.png" alt="Aplicación en Emulador" width="300"/>
+  <figcaption>Aplicación en Emulador</figcaption>
+</figure>
+
+<h2 id="ejecucion-en-un-dispositivo-fisico">Ejecución en un Dispositivo Físico</h2>
+<p>Para ejecutar nuestra aplicación en un dispositivo físico, recuerda haber habilitado la opción de "Depuración USB" en tu dispositivo Android. Para ejecutar nuestra aplicación en un dispositivo físico, sigue estos pasos:</p>
+<ol>
+<li>Conecta tu dispositivo Android a tu computadora mediante un cable USB.</li>
+<li>Asegúrate de que tu dispositivo esté desbloqueado y que la opción de "Depuración USB" esté habilitada en la configuración de desarrollador de tu dispositivo.</li>
+<li>En Android Studio, haz click en el botón de "Run" (Ejecutar) en la barra de herramientas, o utiliza el atajo de teclado <code>Shift + F10</code>.</li>
+<li>Selecciona tu dispositivo físico en la lista de dispositivos disponibles y haz click en "OK".</li>
+<li>Espera a que Android Studio instale y ejecute tu aplicación en el dispositivo físico.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si tu dispositivo no aparece en la lista de dispositivos disponibles, asegúrate de que los controladores USB estén correctamente instalados en tu computadora y que la opción de "Depuración USB" esté habilitada en tu dispositivo.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>La depuración USB es una herramienta poderosa que permite a los desarrolladores interactuar con sus dispositivos Android desde la computadora. Sin embargo, es importante tener cuidado al habilitar esta opción, ya que puede exponer tu dispositivo a riesgos de seguridad si se conecta a computadoras no confiables.</p>
+</div>
+<h2 id="depuracion-de-la-aplicacion">Depuración de la Aplicación</h2>
+<p>La depuración es un proceso que nos permite identificar y corregir errores en nuestra aplicación. Android Studio ofrece herramientas de depuración que nos permiten inspeccionar el estado de nuestra aplicación mientras se ejecuta.</p>
+<p>Android Studio proporciona un depurador integrado que nos permite establecer puntos de interrupción en nuestro código, inspeccionar variables y ver el flujo de ejecución de nuestra aplicación.</p>
+<p>Para depurar nuestra aplicación, sigue estos pasos:</p>
+<ol>
+<li>Abre el archivo de código fuente donde deseas establecer un punto de interrupción.</li>
+<li>Haz click en el margen izquierdo del editor de código, junto a la línea donde deseas establecer el punto de interrupción. Aparecerá un círculo rojo indicando que se ha establecido un punto de interrupción.</li>
+<li>Ejecuta tu aplicación en modo de depuración haciendo click en el botón de "Debug" (Depurar) en la barra de herramientas, o utilizando el atajo de teclado <code>Shift + F9</code>.</li>
+<li>Cuando la ejecución de tu aplicación alcance el punto de interrupción, Android Studio pausará la ejecución y te permitirá inspeccionar el estado de tu aplicación.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Durante la depuración, puedes inspeccionar variables, ver el flujo de ejecución y realizar cambios en tiempo de ejecución. Esto te permite identificar y corregir errores de manera más eficiente.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../estructura_proyecto/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Estructura de un proyecto Android">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Estructura de un proyecto Android
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../otras_consideraciones/" class="md-footer__link md-footer__link--next" aria-label="Next: Otras consideraciones">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Otras consideraciones
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Víctor Suárez. IES Puebla de Vicar.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

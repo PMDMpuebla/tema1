@@ -1,0 +1,881 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introducción a Android - Tema 1 del módulo PMDM">
+      
+      
+      
+        <link rel="canonical" href="https://pmdmpuebla.github.io/tema1/instalacion/">
+      
+      
+        <link rel="prev" href="../introduccion/">
+      
+      
+        <link rel="next" href="../primera_aplicacion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Instalación - Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instalacion-del-entorno-de-desarrollo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" class="md-header__button md-logo" aria-label="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" data-md-component="logo">
+      
+  <img src="../img/alogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instalación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" class="md-nav__button md-logo" aria-label="Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1" data-md-component="logo">
+      
+  <img src="../img/alogo.png" alt="logo">
+
+    </a>
+    Programación Multimedia y Dispositivos Móviles (PMDM) - Tema 1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-android-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de Android Studio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-android-sdk-y-herramientas-de-linea-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de Android SDK y Herramientas de Línea de Comandos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación de Android SDK y Herramientas de Línea de Comandos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Android API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-emuladores-y-dispositivos-fisicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de Emuladores y Dispositivos Físicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de Emuladores y Dispositivos Físicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-emuladores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de Emuladores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-dispositivos-fisicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de Dispositivos Físicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primera_aplicacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primera aplicación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructura_proyecto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura de un proyecto Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejecucion_depuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejecución y depuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../otras_consideraciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Otras consideraciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-android-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de Android Studio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-android-sdk-y-herramientas-de-linea-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de Android SDK y Herramientas de Línea de Comandos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación de Android SDK y Herramientas de Línea de Comandos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Android API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-emuladores-y-dispositivos-fisicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de Emuladores y Dispositivos Físicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de Emuladores y Dispositivos Físicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-emuladores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de Emuladores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-dispositivos-fisicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de Dispositivos Físicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="instalacion-del-entorno-de-desarrollo">Instalación del Entorno de Desarrollo</h1>
+<p>Vamos a comenzar con la instalación del entorno de desarrollo necesario para programar aplicaciones Android. Esto incluye la instalación de Android Studio, el SDK de Android y la configuración de emuladores o dispositivos físicos para probar nuestras aplicaciones.</p>
+<p>Es importante que tengamos todas las herramientas correctamente instaladas y configuradas antes de comenzar a desarrollar nuestras aplicaciones Android. Necesitaremos las siguientes herramientas:</p>
+<ul>
+<li><strong>Android Studio</strong>: Es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android. Incluye todas las herramientas necesarias para crear, probar y depurar aplicaciones Android.</li>
+<li><strong>Android SDK</strong>: Es un conjunto de herramientas y bibliotecas necesarias para desarrollar aplicaciones Android. Incluye el compilador, las herramientas de depuración y las bibliotecas de soporte.</li>
+<li><strong>Herramientas de Línea de Comandos</strong>: Son herramientas que nos permiten interactuar con el SDK de Android desde la línea de comandos. Esto incluye herramientas como <code>adb</code> (Android Debug Bridge) y <code>fastboot</code>.</li>
+<li><strong>Emuladores y Dispositivos Físicos</strong>: Para probar nuestras aplicaciones, podemos utilizar emuladores que simulan dispositivos Android en nuestro ordenador, o podemos conectar dispositivos físicos a nuestro ordenador para probar nuestras aplicaciones directamente en ellos.</li>
+</ul>
+<p>Como opcional podemos utilizar <strong>scrcpy</strong>, una herramienta que nos permite controlar y mostrar la pantalla de un dispositivo Android conectado a nuestro ordenador. Esto puede ser útil para depurar y probar nuestras aplicaciones en un dispositivo físico.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Todos los pasos que vamos a seguir estan basados en la documentación oficial de Android y pueden variar dependiendo del sistema operativo que estemos utilizando (Windows, macOS o Linux). Asegúrate de seguir las instrucciones específicas para tu sistema operativo. Además, nos vasamos en la versión más reciente de Android Studio y el SDK de Android, por lo que es posible que algunas capturas de pantalla o instrucciones puedan diferir ligeramente de lo que veas en tu ordenador.</p>
+</div>
+<h2 id="instalacion-de-android-studio">Instalación de Android Studio</h2>
+<p>Android Studio es el entorno de desarrollo oficial para Android y es necesario para crear aplicaciones Android. A continuación, se detallan los pasos para instalar Android Studio en diferentes sistemas operativos. Esta basado en el IDE (Entorno de Desarrollo Integrado) IntelliJ IDEA, por lo que si ya estás familiarizado con este IDE, te resultará más fácil adaptarte a Android Studio.</p>
+<p>Este tutorial se basa en la versión más reciente de Android Studio, por lo que es posible que algunas capturas de pantalla o instrucciones puedan diferir ligeramente de lo que veas en tu ordenador. Asegúrate de seguir las instrucciones específicas para tu sistema operativo.</p>
+<p>Para utilizar Android Studio necesitamos tener instalado Java Development Kit (JDK) en nuestro ordenador. Asegúrate de tener la versión correcta de JDK instalada antes de continuar con la instalación de Android Studio.</p>
+<p>Para instalar Android Studio, sigue los siguientes pasos:</p>
+<ol>
+<li>Descarga el instalador de Android Studio desde la página oficial: <a href="https://developer.android.com/studio">https://developer.android.com/studio</a>.</li>
+<li>Ejecuta el instalador y sigue las instrucciones en pantalla para completar la instalación.</li>
+<li>Una vez instalado, abre Android Studio y sigue las instrucciones para configurar el entorno de desarrollo, incluyendo la instalación del SDK de Android y la configuración de emuladores o dispositivos físicos.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si descargas la versión en zip o tar.gz de Android Studio, asegúrate de descomprimirla en una ubicación adecuada y ejecutar el archivo <code>studio.sh</code> (Linux) o <code>studio.exe</code> (Windows) para iniciar Android Studio.</p>
+</div>
+<figure>
+  <img src="../img/astudio.png" alt="Android Studio" width="600">
+  <figcaption>Inicio de Android Studio</figcaption>
+</figure>
+
+<p>Una vez instalado, vamos a configurar el entorno de desarrollo para Android, incluyendo la instalación del SDK de Android y la configuración de emuladores o dispositivos físicos para probar nuestras aplicaciones.</p>
+<h2 id="instalacion-de-android-sdk-y-herramientas-de-linea-de-comandos">Instalación de Android SDK y Herramientas de Línea de Comandos</h2>
+<p>Vamos a instalar el SDK de Android y las herramientas de línea de comandos necesarias para desarrollar aplicaciones Android. Esto incluye la instalación de <code>adb</code> (Android Debug Bridge) y <code>fastboot</code>, que nos permiten interactuar con dispositivos Android desde la línea de comandos.</p>
+<p>Este conjunto de herramientas es importante para poder compilar, ejecutar y depurar nuestras aplicaciones Android. A continuación, se detallan los pasos para instalar el SDK de Android y las herramientas de línea de comandos.</p>
+<p>Para poder instalar todas estas herramientas, necesitaremos utilizar el SDK Manager de Android Studio, que nos permite descargar e instalar las diferentes versiones del SDK de Android y las herramientas necesarias para desarrollar aplicaciones Android.</p>
+<figure>
+  <img src="../img/sdkmanager.png" alt="SDK Manager" width="600">
+  <figcaption>SDK Manager de Android Studio</figcaption>
+</figure>
+
+<p>Para acceder al SDK Manager, abre Android Studio y pulsa el menú de tres puntos a la derecha de la barra de herramientas y selecciona "SDK Manager". Desde aquí, podemos descargar e instalar las diferentes versiones del SDK de Android y las herramientas necesarias para desarrollar aplicaciones Android.</p>
+<p>Podemos encontrar 3 pestañas:</p>
+<ul>
+<li><strong>SDK Platforms</strong>: Desde aquí podemos seleccionar las diferentes versiones del SDK de Android que queremos instalar. Asegúrate de seleccionar la versión más reciente del SDK de Android y cualquier otra versión que necesites para tu proyecto.</li>
+<li><strong>SDK Tools</strong>: Desde aquí podemos seleccionar las herramientas de línea de comandos que queremos instalar, incluyendo <code>adb</code> y <code>fastboot</code>. Asegúrate de seleccionar las herramientas necesarias para tu proyecto.</li>
+<li><strong>SDK Update Sites</strong>: Desde aquí podemos agregar o eliminar sitios de actualización del SDK de Android. Esto nos permite descargar e instalar nuevas versiones del SDK de Android y las herramientas necesarias para desarrollar aplicaciones Android.</li>
+</ul>
+<p>En nuestro caso vamos a instalar las siguientes herramientas:</p>
+<ul>
+<li><strong>Android SDK Platform-Tools</strong>: Incluye <code>adb</code> y <code>fastboot</code>, que nos permiten interactuar con dispositivos Android desde la línea de comandos.</li>
+<li><strong>Android SDK Build-Tools</strong>: Incluye las herramientas necesarias para compilar y construir nuestras aplicaciones Android.</li>
+<li><strong>Android Emulator</strong>: Incluye el emulador de Android, que nos permite ejecutar nuestras aplicaciones en un dispositivo virtual en nuestro ordenador.</li>
+<li><strong>Android SDK 16+</strong>: Incluye las bibliotecas necesarias para desarrollar aplicaciones Android para diferentes versiones del sistema operativo Android.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Asegúrate de seleccionar la versión más reciente del SDK de Android y cualquier otra versión que necesites para tu proyecto. Además, asegúrate de seleccionar las herramientas necesarias para tu proyecto, incluyendo <code>adb</code>, <code>fastboot</code> y el emulador de Android.</p>
+</div>
+<p>También podemos instalar otras herramientas opcionales, como <code>NDK</code> (Native Development Kit) si necesitamos desarrollar aplicaciones Android que utilicen código nativo en C o C++. Sin embargo, para la mayoría de los proyectos de desarrollo de aplicaciones Android, no es necesario instalar <code>NDK</code> o también <code>CMake</code> y <code>LLDB</code> (herramientas de depuración para código nativo). Asegúrate de seleccionar solo las herramientas necesarias para tu proyecto.</p>
+<p>Una vez seleccionadas las herramientas necesarias, pulsa el botón "Apply" para descargar e instalar las herramientas seleccionadas. Esto puede tardar varios minutos dependiendo de la velocidad de tu conexión a Internet y del tamaño de las herramientas seleccionadas.</p>
+<h3 id="android-api">Android API</h3>
+<p>Podrás observar que existen un gran número de versiones de Android API disponibles para instalar. Cada versión de Android API corresponde a una versión específica del sistema operativo Android. Por ejemplo, Android API 30 corresponde a Android 11, mientras que Android API 31 corresponde a Android 12.</p>
+<p>Asegurate de instalar la versión más reciente y comprobar la compatibilidad de tu aplicación con las versiones de Android que deseas soportar. Para la mayoría de los proyectos, es recomendable instalar al menos la versión más reciente del SDK de Android y cualquier otra versión que necesites para tu proyecto.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Si vas a utilizar tu dispositivo físico para probar tus aplicaciones, asegúrate de que tu dispositivo esté actualizado a la versión más reciente del sistema operativo Android y que sea compatible con la versión del SDK de Android que estás utilizando. Puedes ver la versión de Android de tu dispositivo en "Ajustes" &gt; "Acerca del teléfono" &gt; "Versión de Android".</p>
+</div>
+<h2 id="configuracion-de-emuladores-y-dispositivos-fisicos">Configuración de Emuladores y Dispositivos Físicos</h2>
+<p>Por último, vamos a configurar emuladores y dispositivos físicos para probar nuestras aplicaciones Android. Esto nos permitirá ejecutar nuestras aplicaciones en un entorno controlado y depurarlas antes de lanzarlas al público.</p>
+<p>Es importante mencionar que los emuladores son una herramienta muy útil para probar nuestras aplicaciones, pero no siempre reflejan el comportamiento de un dispositivo físico. Por lo tanto, es recomendable probar nuestras aplicaciones en dispositivos físicos siempre que sea posible.</p>
+<h3 id="configuracion-de-emuladores">Configuración de Emuladores</h3>
+<p>Vamos a comenzar por configurar emuladores para probar nuestras aplicaciones Android. Los emuladores nos permiten ejecutar nuestras aplicaciones en un dispositivo virtual en nuestro ordenador, lo que nos permite probar nuestras aplicaciones sin necesidad de un dispositivo físico.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Asegurate de tener suficiente espacio en tu disco duro y memoria RAM disponible para ejecutar emuladores, ya que pueden consumir muchos recursos del sistema.</p>
+</div>
+<p>Para crear un nuevo emulador, ve a "Tools" &gt; "AVD Manager" y haz clic en "Create Virtual Device"; o desde el inicio de Android Studio en el menú de tres puntos a la derecha de la barra de herramientas y selecciona "Virtual Device Manager". Desde aquí, podemos seleccionar el tipo de dispositivo que queremos emular, la versión del sistema operativo Android que queremos utilizar y otras configuraciones del emulador.</p>
+<figure>
+  <img src="../img/vdm.png" alt="AVD Manager" width="600">
+  <figcaption>AVD Manager de Android Studio</figcaption>
+</figure>
+
+<p>En la parte superior, podemos añadir un nuevo emulador pulsando el botón "Create Virtual Device". Esto nos permitirá seleccionar el tipo de dispositivo que queremos emular, la versión del sistema operativo Android que queremos utilizar y otras configuraciones del emulador.</p>
+<p>Podemos seleccionar varios perfiles de dispositivos, como teléfonos, tabletas, relojes inteligentes y televisores. Asegúrate de seleccionar un perfil de dispositivo que sea compatible con la versión del SDK de Android que estás utilizando.</p>
+<p>Una vez hecho esto, podemos seleccionar la versión del sistema operativo Android que queremos utilizar en nuestro emulador. Asegúrate de seleccionar una versión del sistema operativo Android que sea compatible con la versión del SDK de Android que estás utilizando.</p>
+<figure>
+  <img src="../img/aversion.png" alt="Crear Emulador" width="600">
+  <figcaption>Creación de un nuevo emulador</figcaption>
+</figure>
+
+<p>Una vez creado, podemos iniciarlo pulsando el botón "Play" en la lista de emuladores. Esto iniciará el emulador y nos permitirá ejecutar nuestras aplicaciones en un dispositivo virtual en nuestro ordenador.</p>
+<figure>
+  <img src="../img/androidemulator.png" alt="Emulador Android" width="350">
+  <figcaption>Emulador Android en ejecución</figcaption>
+</figure>
+
+<h3 id="configuracion-de-dispositivos-fisicos">Configuración de Dispositivos Físicos</h3>
+<p>Para probar nuestras aplicaciones en un dispositivo físico, necesitamos habilitar la depuración USB en nuestro dispositivo Android y conectarlo a nuestro ordenador mediante un cable USB.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Existe la opción de depurar utilizando una conexión inalámbrica, pero para la mayoría de los proyectos, es recomendable utilizar un cable USB para garantizar una conexión estable y rápida.</p>
+</div>
+<p>Es importante habilitar el modo desarrollador en nuestro dispositivo Android; para ello seguiremos los siguientes pasos:</p>
+<ol>
+<li>Ve a "Ajustes" &gt; "Acerca del teléfono" y pulsa varias veces sobre "Número de compilación" hasta que aparezca un mensaje indicando que el modo desarrollador está habilitado.</li>
+<li>Vuelve a "Ajustes" y selecciona "Opciones de desarrollador". Aquí, habilita la opción "Depuración USB".</li>
+<li>Conecta tu dispositivo Android a tu ordenador mediante un cable USB. Asegúrate de que el dispositivo esté desbloqueado y que la pantalla esté encendida.</li>
+</ol>
+<p>Una vez conectado, tu dispositivo debería de mostrarte una notificación indicando que la depuración USB está habilitada. Acepta la solicitud de depuración USB en tu dispositivo para permitir que tu ordenador se conecte a él.</p>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>Es posible que en algunos modelos de dispositivos solo este habilitada la carga por USB y no la transferencia de datos. Asegúrate de que tu dispositivo esté configurado para permitir la transferencia de datos mediante USB.</p>
+</div>
+<figure>
+    <img src="../img/devsettings.jpg" alt="Depuración USB" width="350">
+    <figcaption>Habilitación de la depuración USB en un dispositivo Android</figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introducción">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Introducción
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../primera_aplicacion/" class="md-footer__link md-footer__link--next" aria-label="Next: Primera aplicación">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Primera aplicación
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Víctor Suárez. IES Puebla de Vicar.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
