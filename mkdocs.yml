@@ -9,7 +9,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: img/android-logo.svg
+  logo: img/alogo.png
   features:
     - navigation.footer
 markdown_extensions:
