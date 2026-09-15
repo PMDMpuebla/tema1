@@ -47,6 +47,48 @@ Más adelante veremos como escribir pruebas unitarias y de instrumentación para
 
 Uno de los apartados más importantes de nuestra aplicación son los recursos. Los recursos son archivos que no forman parte del código fuente, pero que son necesarios para el funcionamiento de nuestra aplicación. Estos recursos pueden ser imágenes, archivos de diseño XML, cadenas de texto, estilos y otros.
 
+En Android, los recursos se organizan en la carpeta `res`, que contiene varias subcarpetas para diferentes tipos de recursos. Algunas de las subcarpetas más importantes son:
 
+* `drawable`: Esta carpeta contiene imágenes y gráficos que se utilizan en nuestra aplicación. Podemos colocar imágenes en diferentes resoluciones para adaptarse a diferentes tamaños de pantalla y densidades de píxeles.
+* `layout`: Esta carpeta contiene archivos de diseño XML que definen la estructura y apariencia de nuestras pantallas. Cada archivo de diseño representa una pantalla o un componente de nuestra aplicación.
+* `values`: Esta carpeta contiene archivos XML que definen valores como cadenas de texto, colores y estilos. Por ejemplo, podemos definir nuestras cadenas de texto en un archivo llamado `strings.xml`, y luego referenciarlas en nuestro código fuente o archivos de diseño.
+
+
+Cada uno de estos recursos se puede referenciar en nuestro código fuente utilizando un identificador único generado por Android Studio. Por ejemplo, si tenemos una cadena de texto llamada `app_name` en nuestro archivo `strings.xml`, podemos referenciarla en nuestro código fuente utilizando `R.string.app_name`.
+
+!!! info
+    Más adelante veremos cómo crear y utilizar recursos en nuestra aplicación Android, y cómo organizarlos de manera efectiva para mantener nuestro proyecto limpio y fácil de mantener.
 
 ## Android Manifest
+
+Por último, tenemos el archivo `AndroidManifest.xml`, que se encuentra en la carpeta `manifests`. Este archivo es un archivo de configuración importante para nuestra aplicación, ya que define la estructura y el comportamiento de nuestra aplicación.
+
+En el archivo `AndroidManifest.xml`, podemos declarar las actividades, servicios y permisos que nuestra aplicación necesita. Por ejemplo, podemos declarar la actividad principal de nuestra aplicación, así como los permisos necesarios para acceder a la cámara o al almacenamiento del dispositivo.
+
+Un ejemplo de cómo se ve el archivo `AndroidManifest.xml` es el siguiente:
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapp">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApp">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+```
+
+En este ejemplo, podemos ver que hemos declarado la actividad principal de nuestra aplicación (`MainActivity`) y hemos definido un filtro de intención para que esta actividad se inicie cuando el usuario abra nuestra aplicación.
+
+Podemos ver varias referencias a recursos en el archivo `AndroidManifest.xml`, como `@mipmap/ic_launcher` y `@string/app_name`. Estas referencias nos permiten utilizar recursos definidos en nuestra carpeta `res` en nuestro archivo de manifiesto.
