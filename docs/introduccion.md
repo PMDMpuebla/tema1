@@ -32,7 +32,7 @@ Podemos identificar varios tipos de dispositivos móviles, entre los que se incl
 * _Dispositivos de Juegos portátiles_: Consolas de videojuegos portátiles que permiten a los usuarios jugar en cualquier lugar, ofreciendo una experiencia de juego inmersiva y accesible.
 
 <figure>
-  <img src="/tema1/img/smartdevices.png" alt="Dispositivos inteligentes" width="600">
+  <img src="../img/smartdevices.png" alt="Dispositivos inteligentes" width="600">
   <figcaption>Dispositivos Inteligentes</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ Algunas de sus características clave incluyen:
 Otro de los aspectos importantes de Android es su ecosistema, que incluye una amplia gama de aplicaciones, servicios y herramientas que permiten a los desarrolladores crear experiencias únicas para los usuarios. El ecosistema de Android se basa en la colaboración entre Google, los fabricantes de dispositivos y los desarrolladores de aplicaciones, lo que ha llevado a un crecimiento significativo en la cantidad y calidad de las aplicaciones disponibles en la plataforma.
 
 <figure>
-  <img src="/tema1/img/androidlogo.png" alt="Logo de Android" width="200">
+  <img src="../img/androidlogo.png" alt="Logo de Android" width="200">
   <figcaption>Logo de Android</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ En los últimos años, Android ha seguido creciendo y consolidándose como el si
 Actualmente en la versión 17, Android 17, lanzada en 2026, incluye mejoras significativas en la privacidad del usuario, optimización del rendimiento y nuevas herramientas para desarrolladores. Esta versión también introduce nuevas APIs y funcionalidades que permiten a los desarrolladores crear aplicaciones más innovadoras y atractivas para los usuarios.
 
 <figure>
-  <img src="/tema1/img/android17.jpeg" alt="Android 17" width="200">
+  <img src="../img/android17.jpeg" alt="Android 17" width="200">
   <figcaption>Android 17</figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ Vamos a explorar el ecosistema de Android, que incluye una amplia gama de aplica
 Uno de los aspectos más importantes del ecosistema de Android, es su arquitectura abierta y flexible, que permite a los desarrolladores crear aplicaciones para una amplia variedad de dispositivos y plataformas. Esto ha llevado a un crecimiento significativo en la cantidad y calidad de las aplicaciones disponibles en la plataforma, lo que a su vez ha contribuido al éxito de Android como sistema operativo móvil.
 
 <figure>
-  <img src="/tema1/img/android-stack.png" alt="Ecosistema de Android" width="600">
+  <img src="../img/android-stack.png" alt="Ecosistema de Android" width="600">
   <figcaption>Arquitectura de Android</figcaption>
 </figure>
 
